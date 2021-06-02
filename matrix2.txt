@@ -1,0 +1,48 @@
+import java.io.*;
+public class matrix2
+{ 
+public static void main(String[] args)throws IOException
+{
+int a[][]=new int[3][3];
+int b[][]=new int[3][3];
+int r,c,i,j,flag=0;
+BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+System.out.println("Enter the number of rows and columns:");
+r=Integer.parseInt(br.readLine());
+c=Integer.parseInt(br.readLine());
+System.out.println("Enter the elements of the matrix:");
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+a[i][j]=Integer.parseInt(br.readLine());
+}}
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+b[j][i]=a[i][j];
+}
+}
+if(r==c)
+{
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+if(b[i][j]!=a[i][j])
+{
+flag=1;
+break;
+}
+}
+}if(flag==1)
+System.out.println("Is not symmetric.");
+else
+System.out.println("Is symmetric.");
+}
+else
+System.out.println("Since the given matrix is not a square, it isn't symmetric.");
+}
+}
+

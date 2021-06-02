@@ -1,0 +1,50 @@
+import java.io.*;
+
+public class Matrix
+{
+public static void main(String[] args)
+{
+ int i,j;
+ int a[][]=new int[2][2];
+ int b[][]=new int[2][2];
+ int c[][]=new int[2][2];
+ BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+ try
+ {System.out.println("Enter the elements of the first matrix: ");
+  for(i=0;i<2;i++)
+   {
+    for(j=0;j<2;j++)
+     {
+      a[i][j]=Integer.parseInt(br.readLine());
+     }
+      System.out.println();
+   }
+   System.out.println("Enter the elements of the second matrix: ");
+   for(i=0;i<2;i++)
+    {
+     for(j=0;j<2;j++)
+      {
+       b[i][j]=Integer.parseInt(br.readLine());
+      }
+       System.out.println();
+    }
+   }
+  catch(IOException e)
+   {  
+    System.out.println(e);
+    }
+   for(i=0;i<2;i++)
+   {
+    for(j=0;j<2;j++)
+     {
+      c[i][j]=a[i][j]+b[i][j];
+      }
+    }
+   for(i=0;i<2;i++)
+   {
+    for(j=0;j<2;j++)
+     {
+      System.out.println(c[i][j]);
+      }
+    }
+}}
